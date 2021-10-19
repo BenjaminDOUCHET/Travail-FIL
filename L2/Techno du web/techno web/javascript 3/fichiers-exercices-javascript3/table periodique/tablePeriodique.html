@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>table périodique des éléments (partielle...)</title>
+	<meta name="author" content="JC Routier"/>
+	<meta name="keywords" content="CSS position"/>
+
+	<!-- déclaration de la feuille de style -->
+
+	<link rel="stylesheet" type="text/css" href="style-tablePeriodique.css" title="style juste pour un premier exemple"/>
+
+	<script src="table-periodique.js"></script>
+</head>
+
+<body>
+
+
+<h1> Table périodique des éléments</h1>
+
+<div id="displayFocus">focus : <input id="checkFocus" type="checkbox" checked="checked"/>    </div>
+
+
+<div id="tablePeriodique">
+<div id="focus" class="elementChimique"> </div>
+<div id="lignes">
+	<div class="ligne">
+		<div class="elementChimique nonmetal gauche">
+			<div class="numero">1</div>
+			<div class="electronegativite">2,1</div>
+			<div class="coucheselectrons">
+				<div>1</div>
+			</div>
+			<div class="symbole gaz">H</div>
+			<div class="nom">Hydrogene</div>
+			<div class="masseatomique">1,0088</div>
+		</div>
+
+		<div class="elementChimique gazrare droite">
+			<div class="numero">2</div>
+			<div class="symbole gaz">He</div>
+			<div class="nom">Helium</div>
+			<div class="masseatomique">4,002</div>
+			<div class="electronegativite"></div>
+			<div class="coucheselectrons">
+				<div>2</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ligne">
+		<div class="elementChimique alcalin gauche">
+			<div class="numero">3</div>
+			<div class="symbole solide">Li</div>
+			<div class="nom">Lithium</div>
+			<div class="coucheselectrons">
+				<div>2</div>
+				<div>1</div>
+			</div>
+			<div class="masseatomique">6,941</div>
+			<div class="electronegativite">0,98</div>
+		</div>
+		<div class="elementChimique alcalinoterreux gauche">
+			<div class="numero">4</div>
+			<div class="symbole solide">Be</div>
+			<div class="nom">Berylium</div>
+			<div class="coucheselectrons">
+				<div>2</div>
+				<div>2</div>
+			</div>
+			<div class="masseatomique">9,012</div>
+			<div class="electronegativite">1,57</div>
+		</div>
+
+		<div class="elementChimique gazrare droite">
+			<div class="numero">10</div>
+			<div class="symbole gaz">Ne</div>
+			<div class="nom">Neon</div>
+			<div class="masseatomique">20,1797</div>
+			<div class="electronegativite"></div>
+			<div class="coucheselectrons">
+				<div>2</div>
+				<div>8</div>
+			</div>
+		</div>
+
+		<div class="elementChimique halogene droite">
+			<div class="coucheselectrons">
+				<div>2</div>
+				<div>7</div>
+			</div>
+			<div class="symbole gaz">F</div>
+			<div class="nom">Fluor</div>
+			<div class="masseatomique">18,998</div>
+			<div class="numero">9</div>
+			<div class="electronegativite">3.98</div>
+		</div>
+
+		<div class="elementChimique nonmetal droite">
+			<div class="coucheselectrons">
+				<div>2</div>
+				<div>5</div>
+			</div>
+			<div class="symbole gaz">O</div>
+			<div class="nom">Oxygene</div>
+			<div class="masseatomique">15,999</div>
+			<div class="numero">8</div>
+			<div class="electronegativite">3.44</div>
+		</div>
+
+		<div class="elementChimique nonmetal droite">
+			<div class="coucheselectrons">
+				<div>2</div>
+				<div>6</div>
+			</div>
+			<div class="symbole gaz">N</div>
+			<div class="nom">Azote</div>
+			<div class="masseatomique">14,007</div>
+			<div class="numero">7</div>
+			<div class="electronegativite">3.04</div>
+		</div>
+		<div class="elementChimique nonmetal droite">
+			<div class="coucheselectrons">
+				<div>2</div>
+				<div>4</div>
+			</div>
+			<div class="symbole solide">C</div>
+			<div class="nom">Carbone</div>
+			<div class="masseatomique">12,011</div>
+			<div class="numero">6</div>
+			<div class="electronegativite">2,5</div>
+		</div>
+<div class="elementChimique metalloide droite">
+			<div class="coucheselectrons">
+				<div>2</div>
+				<div>3</div>
+			</div>
+			<div class="symbole solide">B</div>
+			<div class="nom">Bore</div>
+			<div class="masseatomique">10,811</div>
+			<div class="numero">5</div>
+			<div class="electronegativite">2,04</div>
+		</div>
+
+
+	</div>
+
+	<div class="ligne">
+		<div class="elementChimique alcalin gauche">
+			<div class="numero">11</div>
+			<div class="symbole solide">Na</div>
+			<div class="nom">Sodium</div>
+			<div class="coucheselectrons">
+				<div>2</div>
+				<div>8</div>
+				<div>1</div>
+			</div>
+			<div class="masseatomique">22,989</div>
+			<div class="electronegativite">0,93</div>
+		</div>
+		<span id="etc">...</span>
+		</div>
+
+		<div class="ligne"></div>
+    </div> <!-- id lignes -->
+</div>
+
+
+
+
+<div id="checkOptions">
+    masse atomique : <input id="checkMasse" type="checkbox" checked="true"/>
+    couches électrons : <input id="checkCouches" type="checkbox" checked="true"/>
+    électronégativité : <input id="checkElectro" type="checkbox" checked="true"/>
+    <span id="tous">tous</span>/<span id="aucun">aucun</span>
+</div>
+
+<!--
+<div class="elementChimique">
+	<div class="numero"></div>
+	<div class="symbole"></div>
+	<div class="nom"></div>
+	<div class="masseatomique"></div>
+</div>
+-->
+
+</body>
+
+</html>

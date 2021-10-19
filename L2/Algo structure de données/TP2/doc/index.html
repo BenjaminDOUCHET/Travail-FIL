@@ -1,0 +1,337 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Quicksort &#8212; Module tp-rapide 0 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="element module" href="modules.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="element module"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Module tp-rapide 0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="quicksort">
+<h1>Quicksort<a class="headerlink" href="#quicksort" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html"><code class="docutils literal notranslate"><span class="pre">element</span></code> module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html#module-generate"><code class="docutils literal notranslate"><span class="pre">generate</span></code> module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html#module-sorting"><code class="docutils literal notranslate"><span class="pre">sorting</span></code> module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html#module-test"><code class="docutils literal notranslate"><span class="pre">test</span></code> module</a></li>
+</ul>
+</div>
+<div class="section" id="etat-du-tp">
+<h2>Etat du TP<a class="headerlink" href="#etat-du-tp" title="Permalink to this headline">¶</a></h2>
+<p>Décrivez ici l’état d’avancement du TP.</p>
+</div>
+<div class="section" id="reponses-aux-questions">
+<h2>Réponses aux questions<a class="headerlink" href="#reponses-aux-questions" title="Permalink to this headline">¶</a></h2>
+<p>Indiquez ici les réponses aux questions posées dans le TP. Vous
+reprendrez le numéro de la section et le numéro de la question. Par
+exemple pour répondre à la question 3 de la section 2.4 vous
+indiquerez.</p>
+<div class="section" id="question-rappel-1">
+<h3>Question Rappel.1<a class="headerlink" href="#question-rappel-1" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Dans les tri sur place on a :</dt>
+<dd><ul class="first last simple">
+<li>le tri à bulle</li>
+<li>le tri par tas (mais instable)</li>
+<li>intosort (instable aussi)</li>
+<li>smoothsort (instable aussi)</li>
+</ul>
+</dd>
+</dl>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Algorithme_de_tri#Exemples_d'algorithmes_de_tri">-&gt;source&lt;-</a></p>
+</div>
+<div class="section" id="question-rappel-2">
+<h3>Question Rappel.2<a class="headerlink" href="#question-rappel-2" title="Permalink to this headline">¶</a></h3>
+<p>A priori la meilleure façon de partionner un tableau c’est d’en faire des slices
+donc d’utiliser la notation : tab[a:b]  où a et b  sont des indices du tableau
+à fortiori ici on peut juste consigner ces slices dans une structure de donnée paralèlle
+ce qui limitera grandement l’espace memoire supplémentaire nécéssaire.</p>
+</div>
+<div class="section" id="question-rappel-3-a-8">
+<h3>Question Rappel.3 à 8<a class="headerlink" href="#question-rappel-3-a-8" title="Permalink to this headline">¶</a></h3>
+<p>Traité dans le code</p>
+<p><a class="reference external" href="./_modules/sorting.html">voir le code :</a></p>
+</div>
+<div class="section" id="question-rappel-9">
+<h3>Question Rappel.9<a class="headerlink" href="#question-rappel-9" title="Permalink to this headline">¶</a></h3>
+<p>on sais que la partition ne coute quasiment rien
+et est donc O(1)</p>
+<p>en revanche il nous reste la récursion , je pense que la récursion
+des elements de “droite” est executée après celles de “gauche” . ceci
+implique que les espaces mémoires mobilisés ne sont pas sensés s’ajouter
+l’un a l’autre.</p>
+<p>le meileur des cas serait alors un espace de recusrion min à n/2
+on aura donc :</p>
+<div class="math notranslate nohighlight">
+\[T(n) = O(1)+T(n/2)\]</div>
+<p>dans le pire des cas c’est quand on a comme pivot un element qui est a une
+extremité du tableau et donc qu’on se retrouve avec quasiment tout le tableau
+en récursion . auquel cas on aurait :</p>
+<div class="math notranslate nohighlight">
+\[T(n) = O(1)+T(n-1)\]</div>
+</div>
+<div class="section" id="question-pivot-aleatoire-1-a-3">
+<h3>Question Pivot aléatoire.1 à 3<a class="headerlink" href="#question-pivot-aleatoire-1-a-3" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="./_modules/sorting.html">voir le code :</a></p>
+</div>
+<div class="section" id="question-pivot-aleatoire-4">
+<h3>Question Pivot aléatoire.4<a class="headerlink" href="#question-pivot-aleatoire-4" title="Permalink to this headline">¶</a></h3>
+<p>Les résultats de l’experience :</p>
+<p>résultats tirages :
+(moyenne de moyennes pour des listes de taille 1 à 100 tirées 100 fois  ||  unité = nb utilisationde cmp )</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="26%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">type de tri</th>
+<th class="head">random_100</th>
+<th class="head">increasing_100</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>merge sort :</td>
+<td>242.91</td>
+<td>160.03</td>
+</tr>
+<tr class="row-odd"><td>random pivot:</td>
+<td>286.89</td>
+<td>280.47</td>
+</tr>
+<tr class="row-even"><td>naive pivot :</td>
+<td>282.08</td>
+<td>1695.34</td>
+</tr>
+</tbody>
+</table>
+<p>(source dans random_100.dat et increacing_100.dat , je n’ai pas réussi à les inclures dans la doc.
+la dernière ligne est la moyenne , les colonnes sont dans l’ordre : merge , random , naive)</p>
+<p>On peut observer que dans tout les cas le Merge sort est au moins aussi perfomant en terme de
+comparaisons effectuées.</p>
+<p>ce qui est interessant de voir c’est que dans random_100 , la difference est faible entre un random pivot et un naive pivot et c’est
+parfaitement logique parceque la liste etant mélangée y prendre un pivot au hasard ou le premier qui viens reviens au même.</p>
+<p>de même en comparant les naive_pivot et random_pivot on vois qu’il existe des Pivots
+plus performants que d’autres mais globalement les appels à cmp sont plus importants pour le naif.</p>
+<p>Comme j’ai jeté un oeil à la suite je comprends qu’on peut essayer de chercher un pivot
+“optimum” qui vas nous permettre de stabiliser ces appels à cpm qui sont un peu anarchiques.</p>
+</div>
+<div class="section" id="question-pivot-aleatoire-5">
+<h3>Question Pivot aléatoire.5<a class="headerlink" href="#question-pivot-aleatoire-5" title="Permalink to this headline">¶</a></h3>
+<p>Comme nous l’avons vu tantôt dans la question 4 , clairement l’avantage de quicksort n’est pas dans les
+appel à cmp où ils sont surclassés par le merge (en tout cas codé comme il l’est actuelement ) sort mais de
+mon point de vue c’est la consomation en espace mémoire
+qui est la force de ce quicksort .
+En effet dans un merge sort on consomme un espace memoire proportionnel à la longueur de la liste à trier
+alors que dans le cas d’un quicksort on traite directement la liste donc on consomme très peu d’espace supplémentaire</p>
+</div>
+<div class="section" id="question-pivot-aleatoire-6">
+<h3>Question Pivot aléatoire.6<a class="headerlink" href="#question-pivot-aleatoire-6" title="Permalink to this headline">¶</a></h3>
+<p>dans le cas d’une liste deja triée le choix du pivot semble impacter les résultat de façon très significative
+en effet , un mauvais choix de pivot peu entrainer une hausse importante d’appel à cmp.</p>
+<p>c’est logique parceque dans le quicksort on bouge les elements alors en triant quelque chose de trié au final
+on se sabote.</p>
+</div>
+<div class="section" id="question-pivot-aleatoire-7">
+<h3>Question  Pivot aléatoire.7<a class="headerlink" href="#question-pivot-aleatoire-7" title="Permalink to this headline">¶</a></h3>
+<p>après ces experience je pense que le pire des cas est celui où le pivot se retrouve
+au début de la liste a chaque coup et donc que le reste de la liste à trier ne diminue que de 1 à chaque appel recursif
+nous donnant l’equation suivante donc on génère de sous lsite de taille 1 et n-1 :</p>
+<div class="math notranslate nohighlight">
+\[C(0) = C(1) = 0\]</div>
+<p>pour le cas de base.</p>
+<div class="math notranslate nohighlight">
+\[C(n) = n+C(n-1)\]</div>
+<p>Ce qui suivant le cours nous donnerai du :</p>
+<div class="math notranslate nohighlight">
+\[O(n^2)\]</div>
+</div>
+<div class="section" id="question-optimal-pivot-1">
+<h3>Question optimal Pivot.1<a class="headerlink" href="#question-optimal-pivot-1" title="Permalink to this headline">¶</a></h3>
+<p>Theoriquement la meilleur valeur optimale est la médiane de
+l’échantillon présent dans la liste.</p>
+</div>
+<div class="section" id="question-optimal-pivot-2">
+<h3>Question optimal Pivot.2<a class="headerlink" href="#question-optimal-pivot-2" title="Permalink to this headline">¶</a></h3>
+<p>voir le code suivant pour l’implementation :</p>
+<p><a class="reference external" href="./_modules/sorting.html">voir le code :</a></p>
+</div>
+<div class="section" id="question-optimal-pivot-4">
+<h3>Question optimal Pivot.4<a class="headerlink" href="#question-optimal-pivot-4" title="Permalink to this headline">¶</a></h3>
+<p>résultats tirages :
+(moyenne de moyennes pour des listes de taille 1 à 100 tirées 100 fois <a href="#id3"><span class="problematic" id="id4">|</span></a>unité = nb utilisationde cmp )</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="58%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">type de tri</th>
+<th class="head">opti_100</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>merge sort :</td>
+<td>268.75</td>
+</tr>
+<tr class="row-odd"><td>random pivot :</td>
+<td>316.84</td>
+</tr>
+<tr class="row-even"><td>naive pivot :</td>
+<td>318.09</td>
+</tr>
+<tr class="row-odd"><td>opti_pivot  :</td>
+<td>235.95</td>
+</tr>
+</tbody>
+</table>
+<p>on fait enfin mieux que merge_sort (ouf !)
+on peux osberver que l’efficacité de quicksort dépends du
+choix du pivot et que de ce fait il faudrait approfondir l’étude de cas
+pour verifier si la tendance moyenne se confirme.</p>
+<p>on peut cependant observer qu’en random_pivot on a plutot tendance
+à se rapprocher de optimal_pivot. Ce qui peut porte r à croire
+qu’en moyenne la complexité en temps de Quicksort se rapprocherai plus du
+meilleur des cas que du pire des cas.</p>
+</div>
+<div class="section" id="question-optimal-pivot-5">
+<h3>Question optimal Pivot.5<a class="headerlink" href="#question-optimal-pivot-5" title="Permalink to this headline">¶</a></h3>
+<p>Dans le cas de base :</p>
+<div class="math notranslate nohighlight">
+\[C(0) = C(1) = 0\]</div>
+<p>puis :</p>
+<div class="math notranslate nohighlight">
+\[C(n) = 2C(n/2)+n\]</div>
+<p>Suivant ce qu’on a fait en TD on a theoriquement du :</p>
+<div class="math notranslate nohighlight">
+\[O(nlog(n))\]</div>
+<p>voici une graph qui synthétise les resultats  :
+attention les random_pivot et naive pivot sont confondus.</p>
+<a class="reference internal image-reference" href="_images/synthese.png"><img alt="60 maqueurs" src="_images/synthese.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="pivot-reelement-optimal-1">
+<h3>Pivot reelement optimal ?.1<a class="headerlink" href="#pivot-reelement-optimal-1" title="Permalink to this headline">¶</a></h3>
+<p>de toute évidence pas vraiment dans l’impentation à ce niveau
+car j’ai chercher la médiane un peu de façon brut de décoffrage
+ce qui gonfle mes utilisation de cpm.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="#">
+              <img class="logo" src="_static/logo_FIL.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Quicksort</a><ul>
+<li><a class="reference internal" href="#etat-du-tp">Etat du TP</a></li>
+<li><a class="reference internal" href="#reponses-aux-questions">Réponses aux questions</a><ul>
+<li><a class="reference internal" href="#question-rappel-1">Question Rappel.1</a></li>
+<li><a class="reference internal" href="#question-rappel-2">Question Rappel.2</a></li>
+<li><a class="reference internal" href="#question-rappel-3-a-8">Question Rappel.3 à 8</a></li>
+<li><a class="reference internal" href="#question-rappel-9">Question Rappel.9</a></li>
+<li><a class="reference internal" href="#question-pivot-aleatoire-1-a-3">Question Pivot aléatoire.1 à 3</a></li>
+<li><a class="reference internal" href="#question-pivot-aleatoire-4">Question Pivot aléatoire.4</a></li>
+<li><a class="reference internal" href="#question-pivot-aleatoire-5">Question Pivot aléatoire.5</a></li>
+<li><a class="reference internal" href="#question-pivot-aleatoire-6">Question Pivot aléatoire.6</a></li>
+<li><a class="reference internal" href="#question-pivot-aleatoire-7">Question  Pivot aléatoire.7</a></li>
+<li><a class="reference internal" href="#question-optimal-pivot-1">Question optimal Pivot.1</a></li>
+<li><a class="reference internal" href="#question-optimal-pivot-2">Question optimal Pivot.2</a></li>
+<li><a class="reference internal" href="#question-optimal-pivot-4">Question optimal Pivot.4</a></li>
+<li><a class="reference internal" href="#question-optimal-pivot-5">Question optimal Pivot.5</a></li>
+<li><a class="reference internal" href="#pivot-reelement-optimal-1">Pivot reelement optimal ?.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="next chapter"><code class="docutils literal notranslate"><span class="pre">element</span></code> module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="element module"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Module tp-rapide 0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2021, DOUCHET-Benjamin-COLLE-Maxime, ULille.
+      Last updated on 08/03/2021.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

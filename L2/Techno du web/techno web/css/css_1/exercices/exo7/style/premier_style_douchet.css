@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+  color : whitesmoke ; 
+  font-family: "Courier New" , monospace ;
+     
+}
+
+h1 { color : yellow }
+
+strong { font-size: 15px}
+
+p {
+  border-width: 10px ;
+  border-style : dotted ;
+  border-color : white ;
+}
+
+a { color : yellow}
+
+code{ font-size:  15px}

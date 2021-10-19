@@ -1,0 +1,5 @@
+tortue: tp3.hs
+	LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libglut.so runghc tp3.hs
+
+.PHONY:
+	tortue

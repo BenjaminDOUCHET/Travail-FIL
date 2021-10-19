@@ -1,0 +1,40 @@
+#TDM 4
+# DOUCHET Benjamin
+
+
+# exercice 1
+#Q1)
+version un peu poussée (par erreur)
+ALTER TABLE communes ADD categorie int
+update communes set categorie = (1+round(communes.superficie/5))
+# corrigée
+ALTER TABLE communes DROP categorie
+
+# la bonne réponse :
+select * , trunc(communes.superficie/5,0)+1 as cat_sup from communes
+
+#Q2)
+select trunc(communes.superficie/5,0)+1  as cat_sup  , count(trunc(communes.superficie/5,0)+1) as nombre , trunc(avg(superficie),2) as moyenne from communes group by trunc(communes.superficie/5,0)+1 order by cat_sup
+
+#Q3)
+select commune , superficie , nom , communes.insee , communes.epci , trunc(superficie/5,0)+1 as cat_sup  ,trunc(pop_totale/1000,0)+1 as cat_pop ,pop_totale as pop_2016 from communes natural join population where recensement=2016
+
+#Q4)
+a/ SELECT count(trunc(communes.superficie/5,0)+1) as nombre , min(superficie) as sup_min , max(superficie) as max_sup ,trunc(avg(superficie),2) as moy_sup,trunc(superficie/5,0)+1 as cat_sup , trunc(pop_totale/1000,0)+1 as cat_pop FROM communes NATURAL JOIN population where recensement=2016 GROUP BY trunc(pop_totale/1000,0)+1,trunc(superficie/5,0)+1 ORDER BY cat_sup
+
+b/ SELECT count(trunc(communes.superficie/5,0)+1) as nombre , min(superficie) as sup_min , max(superficie) as max_sup ,trunc(avg(superficie),2) as moy_sup, trunc(superficie/5,0)+1 as cat_sup , trunc(pop_totale/1000,0)+1 as cat_pop FROM communes NATURAL JOIN population where recensement=2016 GROUP BY  trunc(pop_totale/1000,0)+1,trunc(superficie/5,0)+1 HAVING count(trunc(communes.superficie/5,0)+1)>5  ORDER BY nombre DESC
+
+##Exercice 2
+
+#Q1
+a/
+Select count(trunc(superficie/5,0)+1) as nombre , min(superficie) as sup_min , max(superficie) as max_sup ,trunc(avg(superficie),2) as moy_sup, cat_sup , cat_pop FROM cat_pop_2016 GROUP BY cat_pop,cat_sup ORDER BY cat_sup
+
+b/
+SELECT count(trunc(superficie/5,0)+1) as nombre , min(superficie) as sup_min , max(superficie) as max_sup ,trunc(avg(superficie),2) as moy_sup, cat_sup , cat_pop FROM cat_pop_2016 GROUP BY cat_pop,cat_sup HAVING count(trunc(superficie/5,0)+1)>5  ORDER BY nombre DESC
+
+
+## Exercice 3
+1) create view pop_2012 as select insee , nom ,pop_totale , recensement from communes natural join population where recensement = 2012
+2) create view pop_2012 as select insee , nom ,pop_totale , recensement from communes natural join population where recensement = 2016
+3) select pop_2012.insee , pop_2016.nom , pop_2012.pop_totale as pop_en_2012 , pop_2016.pop_totale as pop_en_2016, round((cast(pop_2016.pop_totale-pop_2012.pop_totale AS decimal)/cast(pop_2012.pop_totale AS decimal)*100),2) as progression from pop_2012 inner join pop_2016 on pop_2012.insee=pop_2016.insee

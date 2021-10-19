@@ -1,0 +1,37 @@
+html, body {
+  margin:0; padding:0
+}
+
+body {
+background-color:silver;
+
+}
+
+h1 {
+width : 50%;
+margin : auto ;
+font-family:'trebuchet MS', sans-serif;
+font-size:200%;
+color:white;
+background-color:gray;
+text-align:center;
+}
+
+h2 {
+width : 50%;
+margin : auto ;
+font-family:trebuchet;
+font-size:160%;
+color:white;
+background-color:gray;
+text-align:center;
+margin-top : 10px;
+}
+
+section {
+  width : 95% ;
+  margin : auto ;
+  margin-top : 20px ;
+  border : solid ;
+  padding : 5px
+  }

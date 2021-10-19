@@ -1,0 +1,77 @@
+<!-- douchet benjamin -->
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+ <meta charset="utf-8" />
+ <meta name="author" content="Benjamin DOUCHET"/>
+ <title>Exercice colspan et rowspan</title>
+ <!-- pour une affichage plus lisible, ne pas s'occuper de cette partie pour le moment -->
+ <style>
+    table td {border : solid  1pt; width : 30px; text-align:center;}
+ </style>
+</head>
+<body>
+<h1>Première table</h1>
+<table>
+<thead>
+  <tr>
+  <th colspan="3">  Table question 1 </th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">1</td>
+    <td colspan="2">2</td>
+  </tr>
+  <tr>
+    <td> 3 </td>
+    <td> 4 </td>
+  </tr>
+</tbody>
+</table>
+
+
+
+<h1>Seconde table</h1>
+<table>
+<thead>
+  <tr>
+  <th colspan="4">  Table question 2 </th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+    <td colspan="4"> 7 </td>
+  </tr>
+  <tr>
+    <td rowspan="3"> 6 </td>
+    <td colspan="2"> 3 </td>
+    <td rowspan="2"> 4 </td>
+  </tr>
+  <tr>
+    <td> 2 </td>
+    <td> 1 </td>
+  </tr>
+  <tr>
+    <td colspan="3"> 5 </td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

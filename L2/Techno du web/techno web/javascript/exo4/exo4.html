@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>ex4 javascript</title>
+		<meta name="author" content="benjamin douchet"/>
+		<link rel="stylesheet" type="text/css" href="exo4.css"></link>
+
+	</head>
+
+	<body>
+<script src="conversion.js" type="text/javascript"></script>
+<script>
+var tempcel = window.prompt("saisissez une temperature degrès celsius")
+var linefar = "<p>" +"<span class='temp'>"  + tempcel + " degrès Celisus équivaut à " + celenfar(tempcel) + " degrès farenheit </span></p>"
+document.writeln(linefar)
+</script>
+
+<script>
+
+var tempfar = window.prompt("saisissez une temperature degrès farenheit")
+var linecel = "<p>" + "<span class='temp'>"  + tempfar + " degrès farenheit équivaut à " + farencel(tempfar) + " degrès celcius  </span></p>"
+document.writeln(linecel)
+
+</script>
+</body>
+</html>

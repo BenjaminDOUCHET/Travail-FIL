@@ -1,0 +1,22 @@
+#buttons button {
+    font-size : 30px;
+    background-color : black;
+    color: white;
+    padding : 5px 20px;    
+}
+
+#buttons {
+    text-align : center;
+    padding : 5px;    
+}
+
+#doc {
+    text-align : center;
+}
+
+#sun {
+    border : solid black 1px;
+    margin  : 15px;
+    padding : 10px; 
+	width : 25%;	
+}

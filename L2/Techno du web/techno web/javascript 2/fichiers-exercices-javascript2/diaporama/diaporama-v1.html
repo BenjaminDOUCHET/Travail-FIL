@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+  <head>
+    <title> Premier diaporama</title>
+    <meta charset="UTF-8" />
+
+    <link href="style/style-diapo.css" type="text/css" rel="stylesheet" />
+
+		<!-- chargement du script -->
+	<script src="scripts/tabImages.js"></script>
+	<script src="scripts/diapov1.js"></script>
+
+
+
+  </head>
+  <body>
+	<div class="diaporama">
+		<img src="images/image.jpg" alt="un diaporama" id="diapo"/>
+	</div>
+  <div id="buttons">
+    <button id="buttonprec">précedent</button>
+    <button id="play">play</button>
+    <input type="number" id="temps" value='3' required
+       minlength="1" size="5">
+    <button id="button">suivant</button>
+
+
+  </div>
+  <div id='info'>
+    <span id="compteur"> 1/N </span>
+    <span id="source">image.jpg </span>
+
+  </body>
+</html>

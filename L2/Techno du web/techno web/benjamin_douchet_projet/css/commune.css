@@ -1,0 +1,50 @@
+html, body {
+  margin:0; padding:0
+}
+
+body {
+background-color:silver;
+
+}
+
+/* titres */
+
+h1 {
+width : 50%;
+margin : auto ;
+font-family:'trebuchet MS', sans-serif;
+font-size:200%;
+color:white;
+background-color:grey;
+text-align:center;
+}
+
+h2 {
+width : 50%;
+margin : auto ;
+font-family:trebuchet;
+font-size:160%;
+color:white;
+background-color:gray;
+text-align:center;
+margin-top : 10px;
+}
+
+h3{
+  width : 50%;
+  margin : auto ;
+  text-align: center ;
+  text-decoration : none ;
+  background-color: lightgrey ;
+  border : solid whitesmoke ;
+  margin-top : 5px
+}
+
+/* format commun */
+section {
+  width : 95% ;
+  margin : auto ;
+  margin-top : 20px ;
+  border : solid ;
+  padding : 5px
+  }

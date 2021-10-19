@@ -1,0 +1,44 @@
+Q5)
+a/ le critère "nom" de la table equipe qui correspond à "equipe" de la table coureur semblent tout désigné pour faire cette jointure
+
+b/ select dossard , coureurs.nom , coureurs.equipe , couleur from coureurs inner join equipes on coureurs.equipe = equipes.nom
+
+c/ select  coureurs.nom , directeur from coureurs inner join equipes on coureurs.equipe = equipes.nom
+
+d/ select  coureurs.nom , dossard from coureurs inner join equipes on coureurs.equipe = equipes.nom where directeur='Ralph'
+
+e/ select directeur from coureurs inner join equipes on coureurs.equipe = equipes.nom where coureurs.nom='alphonse'
+
+Q6)
+a/  insert into equipes (couleur,directeur,nom) values ('pourpre' , 'hyppolite' , 'roxor')
+
+b/ insert into coureurs (dossard,nom,equipe,taille) values ('8', 'rené' , 'roxor' , '160')
+   insert into coureurs (dossard,nom,equipe,taille) values ('9', 'lans' , 'roxor' , '170')
+
+Q7)
+a/ select nom from equipes where directeur is null
+b/ select nom from equipes where directeur is not null
+
+Q8/
+a/ update coureurs set taille = taille-1 where equipe = 'PicsouBank'
+b/ update equipes set directeur = 'jean-eud' where directeur is null
+
+les commandes suivantes ont été réalisées après les changements des question précédents .
+
+Q9/ select a.nom from coureurs as a inner join coureurs as b on a.taille = b.taille where not(a.nom = b.nom)
+
+Q10/ select a.nom , b.nom from coureurs as a inner join coureurs as b on not (a.equipe = b.equipe)
+
+Q11/ select a.nom from coureurs as a inner join coureurs as b on a.equipe = b.equipe where a.nom=b.nom
+     select a.nom from coureurs as a inner join coureurs as b on not (a.equipe = b.equipe) where a.nom=b.nom
+
+     // ici j'ai les 256 nom en comptant les répétitions , il me manque une restriction pour avoir une instance de chaques noms)//
+     select c.nom from coureurs as b inner join coureurs as a on not(a.equipe=b.equipe) inner join coureurs as c on not ( b.equipe = c.equipe or a.equipe=c.equipe )
+
+Q12/ select equipe from coureurs where nom is null
+
+Q13/ select equipe from coureurs where length(equipe)= (select max(length(equipe)) from coureurs)
+
+
+Q14/ select nom from coureurs where taille= ( select min(taille) from coureurs)
+      // il me manque la solution sans le max //

@@ -1,0 +1,95 @@
+
+h1 {
+   font-size:24px;
+   color : navy;
+   font-weight : bold;
+   padding:7px;
+   box-shadow: 0px 0px 10px #444444;
+   margin : 1%;
+}
+
+h2 {
+   font-size:18px;
+   text-align:left;
+   color : blue;
+   width:90%;
+   margin: 20px 10px;
+   padding:3px;
+   box-shadow: 0px 0px 10px #999999;
+}
+
+div.par {
+    background-color:#EEEEEE;
+    font-size: 16px;
+    margin: 10px 15px;
+    padding : 20px;
+    width:90%;
+    box-shadow: 5px 5px 5px #BBBBBB;
+}
+
+.reponse{
+    background-color:rgba(128,0,0,0.3);    
+    margin : 10px 25px;
+	padding : 20px;
+}
+
+
+a {
+    color: #444444;
+    text-decoration : none;
+    font-weight : bold;
+}
+
+a:hover {
+    background-color : white;
+    color : rgb( 255,0,0);
+    font-weight : bold;
+    border: thin none;
+    border-style : dashed none;
+} 
+
+#panoramique {
+    width : 90%;
+}
+ 
+#paysage {       
+    width : 80%;
+    background-color : #EEEEEE;
+    box-shadow: 5px 5px 5px #BBBBBB;    
+    text-align : center;
+    padding : 5px;
+    margin : auto;
+}
+
+#lamer {
+   
+}
+
+div.nettoie {
+    clear : both;
+}
+
+img {
+    padding : 5px;
+    margin : 1px;
+}
+
+.droite{
+    float : right;
+    width : 25%;
+}
+
+div.exemple {
+	width : 95%;
+	font-size : 16px;
+	background-color : rgba(0,128,0,0.3);
+	padding : 5px;
+	margin: auto;
+	}
+
+.image {
+    width:300px;
+}
+#boutons{
+    text-align : center;    
+}

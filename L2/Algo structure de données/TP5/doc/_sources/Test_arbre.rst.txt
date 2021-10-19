@@ -1,0 +1,9 @@
+============================
+:mod:`displayer` currentmodule
+============================
+
+.. autoclass:: displayer
+   :members:
+      
+   .. automethod:: __init__		
+

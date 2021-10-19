@@ -1,0 +1,14 @@
+
+DOUCHET Benjamin SESI12
+
+
+toutes les questions ont été traitées .
+
+vous remarquerez que je ne parviens pas à récupérer la valeur initiale du
+padding et margin  dans outspace inspace.
+
+j'ai tenté differentes option (getcomputedstyle etc.) mais sans succès alors
+j'ai défini une première valeur en cas de non detection puis je rebondis sur cette dernière
+
+
+sinon tout fonctionne normalement.

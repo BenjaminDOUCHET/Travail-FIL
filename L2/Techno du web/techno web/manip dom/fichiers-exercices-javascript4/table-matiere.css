@@ -1,0 +1,110 @@
+html {
+    background-color : rgba(208,208,0,0.1);
+}
+body {
+    background-color: white;
+    margin : 0px 4px;
+    padding-top : 2px;
+    box-shadow: 0px 2px 15px #BBBBBB;    
+}
+
+h1 {
+   font-size:24px;
+   color : navy;
+   font-weight : bold;
+   padding:7px;
+   box-shadow: 0px 0px 10px #444444;
+   margin : 1%;
+}
+
+h2 {
+   font-size:18px;
+   text-align:left;
+   color : blue;
+   width:90%;
+   margin: 20px 10px;
+   padding:3px;
+   box-shadow: 0px 0px 10px #999999;
+}
+
+h3 {
+   font-size:16px;
+   text-align:left;
+   color : black;
+   width: 80%;
+   margin: 10px 20px;
+   padding:3px;
+   box-shadow: 0px 0px 5px #999999;
+}
+
+
+body>p, div.par {
+    background-color:#EEEEEE;
+    font-size: 16px;
+    margin: 10px 15px;
+    padding : 20px;
+    width:90%;
+    box-shadow: 5px 5px 5px #BBBBBB;
+}
+
+img {
+   width:32%;
+   padding : 3px;
+   margin : 1px;  
+}
+
+a {
+    text-decoration : none;
+}
+a:hover {
+    text-decoration :underline;
+}
+
+#toc a:hover {    
+    color :white;
+}
+
+
+div#toc {
+    background-color : rgba(0,128,128,0.2);
+    display : inline-block;
+    padding: 3px;
+    font-size : 14px;
+    position : fixed;
+    left : 2px;
+    width : 185px;
+}
+div.h1 {
+    font-weight : bold;
+    color : rgba(255,255,255,1);
+    
+}
+div.h2 {
+    font-style : italic;
+    margin-left : 5px;
+    color : #555555;
+   font-size : smaller;
+}
+div.h3 {
+    margin-left : 8px;
+    font-size : smaller;
+    color : #777777;
+}
+
+.droite {
+    float : right;
+    width : 200px;
+}
+
+#panoramique {
+    width : 800px;
+}
+ 
+#paysage {       
+    width : 80%;
+    //background-color : #EEEEEE;
+    //box-shadow: 5px 5px 5px #BBBBBB;    
+    text-align : center;
+    padding : 5px;
+    margin : auto;
+}

@@ -1,0 +1,45 @@
+div.diaporama {
+    text-align:center;
+}
+img#diapo {
+    padding : 5px;
+    width : 50%;
+    transition : opacity 0.5s;
+}
+
+div#info{
+	width : 20% ;
+	margin : auto ;
+	text-align : center ;
+	border : solid grey ;
+	padding : 5px ;
+	
+	
+}
+
+span{
+	background-color: lightgrey ;
+	margin-left : 5px ;
+	border : solid black 0.5px ;
+	padding :2px ;
+}
+
+#buttons{
+    text-align : center;
+}
+
+button {
+	margin:10px;
+	background-color : #444444;
+	color: white;
+	font-weight:bold;
+	padding:5px;
+}
+button:hover {
+	background-color:#888888;
+}
+
+#diapoStep, #idxImage {
+	width : 40px;
+	text-align : right;
+}

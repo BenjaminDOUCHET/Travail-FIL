@@ -1,0 +1,66 @@
+@font-face{
+    font-family: "georgia";
+    src:url("fonts/georgia.ttf");
+}
+
+
+body  {
+	margin: 10px 1%;
+}
+
+
+header {
+	padding : 30px 80px;
+	font-size : 60px;
+	margin-bottom : 30px;
+}
+
+
+footer {
+	padding : 20px 0px 30px 0px;
+	text-align : center;
+	font-size : 24px;
+	font-style : italic;
+}
+
+h1 {
+	color			: black;	
+
+	font-weight		: bold;
+	font-size		: 24px;
+	margin : 5px 0px;
+	padding : 5px;
+	
+}
+
+
+article {	
+	font-size		: 15px;
+	
+	/* fixe la taille de la marge extérieure dans les 4 directions */
+	margin: 30px;
+	/* fixe la taille de la marge intérieure dans les 4 directions */
+	padding : 10px 10px;
+
+}
+
+section {
+	margin : 5px auto;
+	padding : 0px;
+	width : 95%;
+ }
+
+p {
+   text-align:justify;	
+}
+
+a {
+	color : lightgray;
+}
+
+
+/* juste pour visualiser les blocs */
+/* les bordures produites par ces règles sont à désactiver au fur et à mesure de l'exercice */
+section, article, header, h1 , footer {    
+	border : dotted thin black;
+}

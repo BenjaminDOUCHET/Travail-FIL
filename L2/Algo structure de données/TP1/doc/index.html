@@ -1,0 +1,195 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Experimentateur &#8212; Module tp-experimentateur 0 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="experience module" href="experience.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="experience.html" title="experience module"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Module tp-experimentateur 0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="experimentateur">
+<h1>Experimentateur<a class="headerlink" href="#experimentateur" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="experience.html"><code class="docutils literal notranslate"><span class="pre">experience</span></code> module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marker.html"><code class="docutils literal notranslate"><span class="pre">marker</span></code> module</a></li>
+</ul>
+</div>
+<div class="section" id="etat-du-tp">
+<h2>Etat du TP<a class="headerlink" href="#etat-du-tp" title="Permalink to this headline">¶</a></h2>
+<p>Décrivez ici l’état d’avancement du TP.</p>
+</div>
+<div class="section" id="reponses-aux-questions">
+<h2>Réponses aux questions<a class="headerlink" href="#reponses-aux-questions" title="Permalink to this headline">¶</a></h2>
+<p>Indiquez ici les réponses aux questions posées dans le TP. Vous
+reprendrez le numéro de la section et le numéro de la question. Par
+exemple pour répondre à la question 3 de la section 2.4 vous
+indiquerez :</p>
+<div class="section" id="question-1-2-2">
+<h3>Question 1.2.2<a class="headerlink" href="#question-1-2-2" title="Permalink to this headline">¶</a></h3>
+<p>on peut compter le nombre de fois où on fais appel à ‘compare’</p>
+</div>
+<div class="section" id="question-1-2-3">
+<h3>Question 1.2.3<a class="headerlink" href="#question-1-2-3" title="Permalink to this headline">¶</a></h3>
+<p>on peut dire qu’il y a un “pire des cas” qui serait celui où aucun des elements de markers
+ne figure dans positive. dans ce cas on a pas d’arrêt anticipé de la seconde boucle</p>
+</div>
+<div class="section" id="question-1-2-4">
+<h3>Question 1.2.4<a class="headerlink" href="#question-1-2-4" title="Permalink to this headline">¶</a></h3>
+<p>dans le pire des cas :</p>
+<p>c(m,p) = len(m)*len(p)-(len(m)-len(p))</p>
+</div>
+<div class="section" id="question-1-3-2">
+<h3>Question 1.3.2<a class="headerlink" href="#question-1-3-2" title="Permalink to this headline">¶</a></h3>
+<p>encore un fois le pire des cas serait des marqueurs tous “plus grand” que ceux de positive</p>
+<p>le pire des cas serait le cas où tout le marqueurs de markers
+seraient plus grands que les marqueurs de positive.</p>
+<dl class="docutils">
+<dt>auquel cas on connais la compléxité de la boucle de rercheche par dicotomie <span class="classifier-delimiter">:</span> <span class="classifier">log2(n)</span></dt>
+<dd>d’une boucle for complete : n</dd>
+</dl>
+<p>donc on est sur
+c2(m,p) = len(m)*log2(len(p))</p>
+</div>
+<div class="section" id="question-1-4-2">
+<h3>Question 1.4.2<a class="headerlink" href="#question-1-4-2" title="Permalink to this headline">¶</a></h3>
+<p>on peut dire qu’il y a un “pire des cas” mais la difference sera faible.
+en effet le pire des cas serait celui où les marqueurs de positive se trouvent à la fin
+de l’ensemble markers.</p>
+<p>dans ce cas on ferais</p>
+<p>c3(m,p)=len(m) comparaisons</p>
+<p>dans le meilleurs des cas les markers de positive sont au debut de markers ,
+dans ce cas on fera len(markers)-len(positive) comparaisons</p>
+</div>
+<div class="section" id="question-1-5-2">
+<h3>Question 1.5.2<a class="headerlink" href="#question-1-5-2" title="Permalink to this headline">¶</a></h3>
+<p>on peut voir que la dernière version est la plus perfomante car elle nécéssite un seul parcours de chaques listes.
+on peut cependant noter que le tri des listes ncessaires à l’execution de la stratégie 3
+a également un coût que nous n’avons pas mesurés au cours du tp.</p>
+<p>aussi on sait qu’un tri fusion comme ici est O(nlog(n)).</p>
+<p>si je reprends nos résultats :</p>
+<p>strat1 : c(m,p) = len(m)*len(p)-(len(m)-len(p))
+start 2 : c2(m,p) = len(m)*log2(len(p))
+strat 3 : c3(m,p)=len(m) comparaisons</p>
+<p>en mettant à jour avec le coût des tris :</p>
+<p>strat1 : c(m,p) = len(m)*len(p)-(len(m)-len(p))
+start2 : c2(m,p)= len(m)*log2(len(p)) + O(nlog(len(p))
+start3 : c3(m,p)= len(m) comparaisons + O(nlog(len(m)) + O(nlog(len(p))</p>
+</div>
+<div class="section" id="question-1-5-6">
+<h3>Question 1.5.6<a class="headerlink" href="#question-1-5-6" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/10-marqueurs.png"><img alt="10 maqueurs" src="_images/10-marqueurs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/20-marqueurs.png"><img alt="20 maqueurs" src="_images/20-marqueurs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/30-marqueurs.png"><img alt="30 maqueurs" src="_images/30-marqueurs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/40-marqueurs.png"><img alt="10 maqueurs" src="_images/40-marqueurs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/50-marqueurs.png"><img alt="50 maqueurs" src="_images/50-marqueurs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/60-marqueurs.png"><img alt="60 maqueurs" src="_images/60-marqueurs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/70-marqueurs.png"><img alt="70 maqueurs" src="_images/70-marqueurs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/80-marqueurs.png"><img alt="80 maqueurs" src="_images/80-marqueurs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/90-marqueurs.png"><img alt="90 maqueurs" src="_images/90-marqueurs.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/100-marqueurs.png"><img alt="100 maqueurs" src="_images/100-marqueurs.png" style="width: 400px;" /></a>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="#">
+              <img class="logo" src="_static/logo_FIL.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Experimentateur</a><ul>
+<li><a class="reference internal" href="#etat-du-tp">Etat du TP</a></li>
+<li><a class="reference internal" href="#reponses-aux-questions">Réponses aux questions</a><ul>
+<li><a class="reference internal" href="#question-1-2-2">Question 1.2.2</a></li>
+<li><a class="reference internal" href="#question-1-2-3">Question 1.2.3</a></li>
+<li><a class="reference internal" href="#question-1-2-4">Question 1.2.4</a></li>
+<li><a class="reference internal" href="#question-1-3-2">Question 1.3.2</a></li>
+<li><a class="reference internal" href="#question-1-4-2">Question 1.4.2</a></li>
+<li><a class="reference internal" href="#question-1-5-2">Question 1.5.2</a></li>
+<li><a class="reference internal" href="#question-1-5-6">Question 1.5.6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="experience.html"
+                        title="next chapter"><code class="docutils literal notranslate"><span class="pre">experience</span></code> module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="experience.html" title="experience module"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Module tp-experimentateur 0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015-2021, DOUCHET-Benjamin-COLLE-Maxime, Univ. Lille.
+      Last updated on 14/02/2021.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+
+.image {
+    width:32%;
+   padding : 3px;
+    margin : 1px;  
+}
+#boutons{
+    text-align : center;    
+    margin-right : 11%;
+}
+
+#images {
+    margin-right : 11%;    
+    border : solid thin #CCCCCC;
+    padding-top : 3px;
+    padding-bottom : 3px;
+}
+#stock{
+    border : solid thin #CCCCCC;
+    position : absolute;
+    height : 100%;
+    width : 10%;
+    right : 0px;
+    padding : 3px;
+    margin: 1px;
+}
+
+#stock img {
+    width : 99%;
+    padding : 2px;
+}

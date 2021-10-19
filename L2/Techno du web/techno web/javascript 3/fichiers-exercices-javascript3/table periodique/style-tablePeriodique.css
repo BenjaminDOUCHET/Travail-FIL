@@ -1,0 +1,189 @@
+
+#focus {
+    position : absolute;
+    right : 430px;
+    top : -70px;
+    margin : 20px auto 0px auto;
+    transform : scale(1.6);
+    border : rgb(80,80,80) solid 4px;
+}
+
+
+/* bloc #checkOptions,#displayFocus */
+#checkOptions,#displayFocus {
+    background-color : black;
+    color : white;
+    padding: 10px;
+}
+#displayFocus {
+    display : inline-block;
+}
+#checkOptions{
+    margin-left : 250px;
+    background-color : black;
+    color : white;
+    padding: 10px;
+    width : 500px;
+    text-align : center;
+}
+
+
+
+#checkOptions input {
+    margin-right : 20px;
+    vertical-align : middle;
+    transform : scale(1.5);
+}
+
+#tous, #aucun {
+    padding : 0px 5px 3px 5px;
+    border-radius : 5px;
+    margin : 0px 3px;
+}
+#tous:hover, #aucun:hover {
+    background-color : white;
+    color : black;
+}
+
+
+
+
+
+div#tablePeriodique {
+    width : 1000px;
+    background-color : rgb(255,255,128);
+    padding : 0.5%;
+}
+
+div.elementChimique {
+    width : 7%;
+    height : 80px;
+    position : relative;
+    margin : 1px 1px;    
+}
+
+
+div.elementChimique div.numero {
+    position : absolute;
+    left : 2%;
+    top :-5%;
+    font-size : 16px;
+    font-weight : bold;
+}
+
+
+
+div.elementChimique div.electronegativite {
+    font-size : 9px;
+    position : absolute;  
+    top : -1%;
+    text-align : center;
+    width : 100%;
+}
+
+
+div.elementChimique div.coucheselectrons {
+    font-size : 8px;
+    position : absolute;
+    right : 2%;
+    top : 1%;
+}
+
+div.elementChimique div.coucheselectrons div:first-child{
+    color : rgb(128,0,0);
+    position : relative;
+    bottom : 2px;
+}
+
+div.elementChimique div.coucheselectrons div:nth-child(2){
+    color : rgb(64,0,0);
+    position : relative;
+    bottom : 4px;
+}
+div.elementChimique div.coucheselectrons div:nth-child(3){
+    color : rgb(32,0,0);
+    position : relative;
+    bottom : 6px;
+}
+
+
+div.elementChimique div.symbole {
+    font-size: 36px;   
+    font-weight : bold;
+    font-family: sans-serif;
+    position : relative;
+    top : 20%;    
+    text-align:center;
+}
+
+div.elementChimique div.nom {
+    font-style : italic;
+    position : relative;
+    top : 12%;
+    text-align :center;
+    font-size : 10px;
+}
+
+div.halogene {
+        background-color : rgba(255,128,128,1);
+}
+div.nonmetal {
+        background-color : rgba(128,255,255,1);
+}
+div.metalloide {
+        background-color : rgba(255,128,255,1);
+}
+div.gazrare {
+        background-color : rgba(128,128,255,1);
+}
+div.alcalin {
+        background-color : rgba(245,245,0,1);
+}
+div.alcalinoterreux {
+        background-color : rgba(225,225,0,1);
+}
+div.gaz {
+        color : blue;
+}
+div.solide {
+        color : black;
+}
+
+div.elementChimique div.masseatomique {
+    font-size : 10px;
+    position : absolute;
+    bottom : 1%;
+    left : 2%;
+    font-size : 8px;    
+}
+
+div.ligne {
+    clear:both;
+}
+.gauche {
+    float : left;
+}
+.droite {
+    float : right;
+}
+
+#etc {
+    font-size : 40px;
+}
+
+#tablePeriodique {
+    position : relative;
+}
+
+
+
+
+#focus.elementChimique div.electronegativite {
+    display : block;
+}
+
+
+#focus.elementChimique div.coucheselectrons {
+    display : block;
+}
+

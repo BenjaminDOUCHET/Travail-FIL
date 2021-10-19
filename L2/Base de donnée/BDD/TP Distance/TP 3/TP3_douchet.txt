@@ -1,0 +1,45 @@
+TD3
+Douchet Benjamin
+tous les exercices sont faits
+Q1)
+
+1/ select insee,nom,superficie from communes order by superficie desc
+
+2/ select nom from communes where nom like'%Lille%'
+
+3/ select insee,substring(insee,1,2)as code_departement,nom from communes
+
+4/ select communes.insee,communes.nom,recensement,population.pop_totale from communes inner join population on communes.insee=population.insee order by nom desc , recensement
+
+5/ select communes.insee,communes.nom,population.pop_totale from communes inner join population on communes.insee=population.insee  where recensement=2016 order by population.pop_totale desc
+
+6/ select communes.insee,communes.nom,population.pop_mun , communes.superficie , round(population.pop_mun/superficie)as densité from communes inner join population on communes.insee=population.insee where recensement=2016 order by densité desc
+
+
+Q2)
+
+select insee,nom,pop_mun,superficie,round(pop_mun/superficie)as densité from communes natural join population where recensement=2016 order by densité desc
+
+Q3)
+
+1/ select nom,nom_station,lat,lon from communes natural join stations order by nom
+
+2/ select distinct communes.nom,stations.nom_station,stations.lat,stations.lon from communes left outer join stations on communes.insee=stations.insee order by communes.nom
+
+Q4)
+
+1/ select count(*) from mesures_mensuelles  #car une ligne = une mesure#
+
+2/ select avg(valeur),max(valeur),min(valeur) from mesures_mensuelles where code_polluant=7
+
+3/ select count(*),avg(valeur),max(valeur),min(valeur) from mesures_mensuelles where code_polluant=7 group by code_station
+
+4/ select count(valeur),avg(valeur),max(valeur),min(valeur),nom_station from mesures_mensuelles natural join stations where code_polluant=7 group by nom_station
+
+5/ select count(valeur),avg(valeur),max(valeur),min(valeur),nom_station from mesures_mensuelles natural join stations where code_polluant=6001 group by nom_station
+
+6/ select count(valeur),avg(valeur),max(valeur),min(valeur),nom_station from mesures_mensuelles natural join stations where code_polluant=6001 group by nom_station having avg(valeur)>10
+
+7/select count(valeur),avg(valeur),max(valeur),min(valeur),code_station,code_polluant from mesures_mensuelles group by code_station,code_polluant order by code_polluant
+
+8/ select count(valeur)as nb_relevé,avg(valeur) as valeur_moyenne,max(valeur),min(valeur),nom_station,nom_polluant from mesures_mensuelles  natural join stations natural join polluants group by nom_station,nom_polluant

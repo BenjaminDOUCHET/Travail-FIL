@@ -1,0 +1,42 @@
+
+#doc {
+    margin-left : 100Px;;
+}
+
+#doc * {
+        vertical-align : middle;    
+}
+input {
+    text-align : right;
+    width : 100px;    
+}
+
+input, span.unite {
+    font-size : 24px;
+    vertical-align : middle;
+}
+#buttons button {
+    margin : 3px;
+    color : #DDDDDD;
+    background-color : #333333;
+    border : none;
+    padding: 3px 5px;
+    
+    transition: color 1s;
+    transition: background-color 0.5s;
+}
+
+#buttons button:hover {
+    color : black;
+    background-color : #DDDDDD;
+}
+
+#doc>div {
+    display : inline-block;
+}
+
+span.unite {
+    color: #555555;
+    font-family: sans-serif;
+    margin-left : 3px;
+}

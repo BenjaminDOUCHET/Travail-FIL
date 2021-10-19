@@ -1,0 +1,192 @@
+
+/* conteneur de texte */
+
+div a{
+  margin-left : 20px
+}
+div p{
+  width: 80%;
+  margin :2.5% ;
+  padding : 20px;  
+}
+
+div ul{
+  width: 80%;
+  
+}
+section a {
+font-family:trebuchet;
+font-size:100%;
+color:#FFFFF0;
+background-color:silver;
+border-color:black;
+border-style:outset;
+border-width:3px;
+text-decoration:none;
+}
+
+section a:visited{
+  background-color:whitesmoke;
+  color : black
+}
+
+section a:hover{
+  background-color:whitesmoke;
+  color : black
+}
+
+img{
+  border : solid ;
+  width : 40% ;
+  margin-left : 30% ;
+  
+}
+
+
+/* listes */
+
+
+li {
+font-family:trebuchet, sans-serif;
+font-size:100%;
+color:black;
+text-align:left;
+}
+
+
+
+
+
+
+/* partie tableau */
+
+
+table {
+  margin-top : 20px
+}
+
+caption{
+  font-family:trebuchet ;
+  margin : auto ;
+  text-align: center ;
+  color : black ;
+  font-size : larger ;
+  width : 50%;
+  text-decoration : none ;
+  background-color: lightgrey ;
+  border : solid whitesmoke ;
+  margin-top : 5px
+}
+
+
+th{
+font-family:trebuchet;
+font-size:100%;
+color:whitesmoke;
+text-align:center;
+background-color:grey;
+border-color:black;
+border-style:outset;
+border-width:3px
+}
+
+td {
+font-family:trebuchet;
+font-size:100%;
+color:black;
+text-align:center;
+background-color:silver;
+border-color:black;
+border-style:outset;
+border-width:3px;
+}
+
+/* partie menu fixe */
+
+nav.menu {
+    position : fixed;
+    right : 10px;
+    top : 30px;
+    border: rgba(255,255,255,0.7) 1px solid;
+    background-color : grey;
+    border-radius : 4px;
+   
+    
+}
+
+nav.menu div {
+    background-color : rgba(70,70,70,0.6);
+    margin : 6px;
+    text-align : center;
+    padding : 4px;
+    border-radius : 8px;
+}
+
+nav.menu a {
+    text-decoration : none;
+    color : whitesmoke;
+}
+
+nav.menu div:hover {
+  box-shadow : 0px 0px 3px 1px rgba(255,255,255,0.7);   
+  background-color : rgba(20,20,20,0.6);
+}
+
+
+
+
+
+section:last-of-type{
+  padding-bottom : 2%
+}
+
+footer {
+  position : fixed ;
+  bottom : 0% ;
+  width : 100%;   
+}
+
+
+footer div{  
+  color : red ;
+  margin : auto ;
+  width : 70% ;
+  text-align : center ;
+  background-color: grey ;
+  border : solid black ;
+}
+
+
+
+
+
+@media (max-width :1000px){
+  img{display:none}
+  html nav ul{
+  width : 100%  ;
+  top: 6%;
+  
+  }
+  
+  
+  footer div{
+    font-size : 10px ;
+    
+    margin : auto ;
+  }
+  
+ h1{
+    font-size : 15px
+  }
+  
+  h2{ 
+  font-size : 15px}
+  h3 {
+    font-size : 12px
+  }
+}
+@media print{
+  img{display:none}
+  nav{display :none}
+  a {display : none}
+}

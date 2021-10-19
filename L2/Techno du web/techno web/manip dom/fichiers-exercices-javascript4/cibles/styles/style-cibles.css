@@ -1,0 +1,63 @@
+body {
+  text-align : center;
+}
+
+#control, #field {
+  width : 400px;
+  margin : auto;  
+}
+
+#field {
+  background-color: rgba(128,255,128,0.3);
+  height : 400px;
+  margin-bottom : 40px;
+  margin-top : 20px;
+  box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.2);
+  position : relative;
+}
+
+
+#control {
+  background-color : rgb(200,200,255);
+  padding : 10px 0px;
+}
+
+.target {
+  position : absolute;
+  width : 30px;
+  height  : 30px;
+  border-radius : 30px;
+  box-shadow : 0px 0px 6px 2px rgb(0,0,0,0.3);
+  background-color: rgb(128,128,255);
+  opacity : 0;
+  transition-property : background-color, opacity;
+  transition-duration : 0.2s, 0.8s;  
+  transition-timing-function : ease-in, ease-out;
+  transition-delay : 0s, 0.2s;
+
+  background-color: rgba(0,255,0,1);
+  opacity : 1;
+}
+
+
+
+#control div {
+  margin :8px 0px;
+}
+
+#remaining, #nbtargets {
+  display : inline-block;  
+  padding : 0px 5px;
+}
+#remaining {
+  text-align : center;  
+  margin-right :20px;
+  width : 30px;
+  background-color: white;
+}
+#nbtargets{
+  text-align: center;
+  width : 30px;
+  margin-right : 5px;
+}
+

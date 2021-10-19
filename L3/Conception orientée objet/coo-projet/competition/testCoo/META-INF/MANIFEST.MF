@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Build-Date: 2021-09-22
+Build-Revision: 9883ffa5ab9ddb27ce33f6d2ace9f6be16403f40
+Build-Time: 20:54:36.897+0200
+Built-By: JUnit Team
+Bundle-ManifestVersion: 2
+Bundle-Name: JUnit Platform Console Standalone
+Bundle-SymbolicName: junit-platform-console-standalone
+Bundle-Version: 1.8.1
+Created-By: 11.0.12 (Eclipse Foundation 11.0.12+7)
+Engine-Version-junit-jupiter: 5.8.1
+Engine-Version-junit-vintage: 5.8.1
+Implementation-Title: junit-platform-console-standalone
+Implementation-Vendor: junit.org
+Implementation-Version: 1.8.1
+Import-Package: kotlin;resolution:=optional,kotlin.collections;resolut
+ ion:=optional,kotlin.jvm.functions;resolution:=optional,kotlin.jvm.in
+ ternal;resolution:=optional,javax.xml.stream
+Main-Class: org.junit.platform.console.ConsoleLauncher
+Multi-Release: true
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=9))"
+Specification-Title: junit-platform-console-standalone
+Specification-Vendor: junit.org
+Specification-Version: 1.8.1
+

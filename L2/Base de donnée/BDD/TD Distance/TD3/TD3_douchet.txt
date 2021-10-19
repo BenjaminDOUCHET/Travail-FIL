@@ -1,0 +1,16 @@
+Q1,
+1/ select pseudo,inscrit,cagnotte from users ORDER BY inscrit DESC cagnotte
+
+2/ SELECT id , prix FROM jeux WHERE prix >10
+
+3/ SELECT jeu ,COUNT(*) as nbparties FROM parties GROUP BY jeu  HAVING nbparties>10e6 
+
+4/ SELECT jeu as id_du_jeu , points FROM parties WHERE joueur='GANDALF'
+
+5/ SELECT jeux.nom , parties.points FROM jeux INNER JOIN parties on jeux.id=partie.jeu WHERE joueur='GANDALF'
+
+6/ SELECT jeu , sum(points) FROM parties GROUP BY jeu HAVING joueur='GANDALF'
+
+7/ SELECT count(nom) as nb_jeu , avg(prix) as prix_moyen FROM jeux
+
+8/ SELECT parties.joueur, jeux.nom , point FROM jeu INNER JOIN parties on jeux.id=parties.jeu WHERE point>10e4

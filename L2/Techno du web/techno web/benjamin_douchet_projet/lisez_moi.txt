@@ -1,0 +1,40 @@
+DOUCHET BENJAMIN
+
+
+regles css : 
+
+outre les règle basiques j'ai tenté de mettre en oeuvre de l'animation dans le menu, 
+
+vous trouverez un effet de transition avec 
+
+:hover
+
+ce qui permet d'avoir un menu interactif en liens avec les hypertexte qui 
+sont incrustés dans les images .
+
+
+
+pour les pages des villes il y a un footer fixe qui gère un message d'avertissement ,
+
+ainsi qu'un menu fixe qui peut vous permettre de naviguer à tout moment , 
+
+pour savoir où on en est dans la navigation j'ai ajouté un : visited qui change la couleurs des href 
+
+
+
+j'ai ajouté des media queries :
+
+indéxées sur la taille de l'écran (width) qui gèrent la taille du texte , la position
+du footer et l'affichage des images 
+
+sur le media print qui fais disparaitre le menu qu'il n'est pas pertinent d'imprimer.
+
+
+je pense avoir parcouru dans les grandes lignes toutes les propriétées vu en css sur
+cette première partie de semestre.
+
+(il me manque les jeux de background mais j'ai testé et ça fais un peu kitch)
+
+Respectuesement ,
+
+Benjamin DOUCHET

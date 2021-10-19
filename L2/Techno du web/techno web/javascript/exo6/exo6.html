@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>ex6 javascript</title>
+		<meta name="author" content="benjamin douchet"/>
+		<link rel="stylesheet" type="text/css" href="exo6.css"></link>
+
+
+	</head>
+
+	<body>
+
+
+		<script>
+		var lat=window.prompt("entrez latitude (format xx.xx)")
+		var long = window.prompt("entrez longitude (format xx.xx)")
+		var zoom = window.prompt("quel zoom ?")
+		document.writeln('<img src="https://www.mapquestapi.com/staticmap/v5/map?key=ZVodyqDT7AUZtGGEs9cVsT0U3CD1og7L&amp;center='+lat+','+long+'&amp;zoom='+zoom+'&amp;size=500,500&amp;type=sat" alt="carte" />');
+		/* il n'y avais pas besoin de convertir la donnée car documnent.writeln a besoin d'un input en str*/
+		</script>
+	</body>
+</html>

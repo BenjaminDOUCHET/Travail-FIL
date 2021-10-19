@@ -1,0 +1,78 @@
+package goosegame;
+import goosegame.cell.*;
+import java.util.Random;
+/** A player in the "jeu de l'oie" game */
+public class Player {
+	
+	private static final Random ALEA = new Random();
+	
+    /** current cell of the player */
+    protected Cell cell;
+    
+    /** name of the player*/
+    protected String name;
+    protected int resDice ; 
+
+
+    /** 
+     * @param name the name of this player
+     * @param cell the starting cell of this player
+    */
+    public Player (String name, Cell cell){
+        this.name = name;
+        this.cell = cell;
+    }
+    /**  A player with no current cell (== null)
+     * @param name the name of this player
+     * 
+    */
+    public Player (String name){
+        this(name, null);
+    }
+    /** */
+    public String toString() { return name; }
+
+
+    /** returns the current cell of the player 
+      *  @return the current cell of the player 
+      */
+    public Cell getCell() { 
+       return this.cell ; 
+    }
+    /** changes the cell of the player 
+     * @param newCell the new cell
+    */
+    public void setCell(Cell newCell) { 
+       this.cell = newCell; 
+    }    
+    /** result of a 1d6 throw
+     * @return random result of a 1d6 throw 
+    */
+    private int oneDieThrow() {	
+      int result = ALEA.nextInt(6)+ 1; 
+      this.resDice = result;
+       return result;
+    }
+    /** result of a 2d6 throw 
+      * @return random result of a 2d6 throw
+    */ 	
+    public int twoDiceThrow() {
+        int result = oneDieThrow() + oneDieThrow();
+        this.resDice = result;
+        return result;
+    }
+
+    public int getResDice(){
+      return this.resDice;
+    }
+
+    public boolean equals(Object o){
+      if(!(o instanceof Player)){
+        return false ;
+      }
+      else {
+        Player other = (Player)o;
+        return this.toString().equals(o.toString());
+      }
+    }
+}// Player
